@@ -46,11 +46,11 @@ export default function Hero() {
 
       {/* Content Box */}
       <div 
-        className="absolute bottom-0 left-0 w-[95%] sm:w-[85%] md:w-[75%] lg:w-[60%] xl:w-[50%] h-[180px] sm:h-[200px] md:h-[240px] lg:h-[320px] z-10 bg-[#ffcc00] group" 
+        className="absolute bottom-0 left-0 w-[95%] sm:w-[85%] md:w-[75%] lg:w-[calc(60%+70px)] xl:w-[calc(50%+70px)] h-[180px] sm:h-[200px] md:h-[240px] lg:h-[320px] z-10 bg-[#ffcc00] group" 
         style={{ clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0% 100%)' }}
       >
          <div className="h-full flex flex-col justify-center pl-6 sm:pl-10 md:pl-16 lg:pl-20 pr-12 sm:pr-16 md:pr-20 lg:pr-24 pb-4 md:pb-6">
-           <h1 className="text-[24px] sm:text-[32px] md:text-[40px] lg:text-[44px] xl:text-[52px] font-black text-[#111] leading-[1.2] sm:leading-[1.15] md:leading-[1.12] lg:leading-[1.1] tracking-tight transition-transform duration-500 group-hover:translate-x-3 cursor-default">
+           <h1 className="text-[20px] sm:text-[28px] md:text-[36px] lg:text-[40px] xl:text-[40px] font-black text-[#111] leading-[1.2] sm:leading-[1.15] md:leading-[1.12] lg:leading-[1.1] tracking-tight transition-transform duration-500 group-hover:translate-x-3 cursor-default">
              Designing Transformative{' '}<br className="hidden sm:block" />
              Brand Experiences That{' '}<br className="hidden sm:block" />
              Leave a Mark

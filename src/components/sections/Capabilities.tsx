@@ -6,12 +6,12 @@ export default function Capabilities() {
     {
       title: "Brand Experiences & Launches",
       description: "Immersive brand-led experiences designed to create visibility, engagement and lasting recall.",
-      image: "/images/tuborg.png"
+      image: "/images/brand-experiences.png"
     },
     {
       title: "Event Design & Production",
       description: "Immersive brand-led experiences designed to create visibility, engagement and lasting recall.",
-      image: "/images/smart-homes.png"
+      image: "/images/event-design.png"
     },
     {
       title: "Brand Activation & Creative Concepts",
@@ -21,27 +21,27 @@ export default function Capabilities() {
     {
       title: "Flagship Conferences & Summits",
       description: "Industry-defining platforms that convene leaders, ideas, and global conversations at scale.",
-      image: "/images/keysight-world.png"
+      image: "/images/flagship-conferences.png"
     },
     {
       title: "Trade Shows & Exhibitions",
       description: "Strategic showcase environments designed to maximize brand presence, interactions, networking and business outcomes.",
-      image: "/images/smarttech-india.png"
+      image: "/images/trade-shows.png"
     },
     {
       title: "Institutional & Government Engagements",
       description: "Structured, high-impact experiences tailored for public sector initiatives, govt. delegations, and global collaborations.",
-      image: "/images/pinnacle-booth.png"
+      image: "/images/institutional-engagements.png"
     },
     {
       title: "Experiential Platforms & IP's",
       description: "Concept-driven properties built to engage audiences, develop communities, and scale into long-term ecosystems.",
-      image: "/images/iti-congress.png"
+      image: "/images/experiential-platforms.png"
     },
     {
       title: "MICE",
       description: "Curated business experiences designed to engage stakeholders, strengthen relationships, and drive productive results.",
-      image: "/images/maybelline-booth.png"
+      image: "/images/mice.png"
     },
     {
       title: "Digital Experiences",
@@ -79,7 +79,7 @@ export default function Capabilities() {
                 <div className="overflow-hidden rounded-md shadow-sm relative">
                   <div className="absolute inset-0 bg-white/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none mix-blend-overlay" />
                   <img 
-                    src={card.image} 
+                    src={`${import.meta.env.BASE_URL}${card.image.replace(/^\//, '')}`}
                     alt={card.title} 
                     className="w-full h-[220px] object-cover transition-transform duration-700 ease-out group-hover:scale-110" 
                   />
