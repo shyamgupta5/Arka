@@ -2,11 +2,14 @@ import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const images = [
-  'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1600',
-  'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1600',
-  'https://images.unsplash.com/photo-1475721025505-c310b80db1e8?auto=format&fit=crop&q=80&w=1600',
-  'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=1600',
-  'https://images.unsplash.com/photo-1588196749597-9ff0465b8390?auto=format&fit=crop&q=80&w=1600'
+  '../src/images/mh-pinnacle.png',
+  '../src/images/mh-conference.png',
+  '../src/images/mh-tuborg.png',
+  '../src/images/mh-fintech.png',
+  '../src/images/mh-iti.png',
+  '../src/images/mh-bbc.png',
+  '../src/images/mh-calsbarg.png',
+  
 ];
 
 export default function Hero() {
@@ -46,7 +49,7 @@ export default function Hero() {
 
       {/* Content Box */}
       <div 
-        className="absolute bottom-0 left-0 w-[95%] sm:w-[85%] md:w-[75%] lg:w-[calc(60%+70px)] xl:w-[calc(50%+70px)] h-[180px] sm:h-[200px] md:h-[240px] lg:h-[320px] z-10 bg-[#ffcc00] group" 
+        className="absolute bottom-0 left-0 w-[95%] sm:w-[85%] md:w-[75%] lg:w-[calc(60%+70px)] xl:w-[calc(50%+70px)] h-[120px] sm:h-[140px] md:h-[180px] lg:h-[260px] z-10 bg-[#ffcc00]/80 backdrop-blur-md group" 
         style={{ clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0% 100%)' }}
       >
          <div className="h-full flex flex-col justify-center pl-6 sm:pl-10 md:pl-16 lg:pl-20 pr-12 sm:pr-16 md:pr-20 lg:pr-24 pb-4 md:pb-6">

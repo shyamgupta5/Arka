@@ -6,47 +6,47 @@ export default function Capabilities() {
     {
       title: "Brand Experiences & Launches",
       description: "Immersive brand-led experiences designed to create visibility, engagement and lasting recall.",
-      image: "/images/tuborg.png"
+      image: "../src/images/brand.png"
     },
     {
       title: "Event Design & Production",
       description: "Immersive brand-led experiences designed to create visibility, engagement and lasting recall.",
-      image: "/images/smart-homes.png"
+      image: "../src/images/event.png"
     },
     {
       title: "Brand Activation & Creative Concepts",
       description: "Innovative concepts and activations crafted to spark engagement, drive participation, and bring brands to life.",
-      image: "/images/brand-activation.png"
+      image: "../src/images/brand-activation.png"
     },
     {
       title: "Flagship Conferences & Summits",
       description: "Industry-defining platforms that convene leaders, ideas, and global conversations at scale.",
-      image: "/images/keysight-world.png"
+      image: "../src/images/flagship.png"
     },
     {
       title: "Trade Shows & Exhibitions",
       description: "Strategic showcase environments designed to maximize brand presence, interactions, networking and business outcomes.",
-      image: "/images/smarttech-india.png"
+      image: "../src/images/tradeshow.png"
     },
     {
       title: "Institutional & Government Engagements",
       description: "Structured, high-impact experiences tailored for public sector initiatives, govt. delegations, and global collaborations.",
-      image: "/images/pinnacle-booth.png"
+      image: "../src/images/institutional.png"
     },
     {
       title: "Experiential Platforms & IP's",
       description: "Concept-driven properties built to engage audiences, develop communities, and scale into long-term ecosystems.",
-      image: "/images/iti-congress.png"
+      image: "../src/images/experiential.png"
     },
     {
       title: "MICE",
       description: "Curated business experiences designed to engage stakeholders, strengthen relationships, and drive productive results.",
-      image: "/images/maybelline-booth.png"
+      image: "../src/images/mice.png"
     },
     {
       title: "Digital Experiences",
       description: "Integrated digital and hybrid experiences - Connecting global audiences globally.",
-      image: "/images/digital-experiences.png"
+      image: "../src/images/digital.png"
     }
   ];
 
