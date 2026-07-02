@@ -1,15 +1,22 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
+import mhPinnacleImg from '../../images/mh-pinnacle.png';
+import mhConferenceImg from '../../images/mh-conference.png';
+import mhTuborgImg from '../../images/mh-tuborg.png';
+import mhFintechImg from '../../images/mh-fintech.png';
+import mhItiImg from '../../images/mh-iti.png';
+import mhBbcImg from '../../images/mh-bbc.png';
+import mhCalsbargImg from '../../images/mh-calsbarg.png';
+
 const images = [
-  '../src/images/mh-pinnacle.png',
-  '../src/images/mh-conference.png',
-  '../src/images/mh-tuborg.png',
-  '../src/images/mh-fintech.png',
-  '../src/images/mh-iti.png',
-  '../src/images/mh-bbc.png',
-  '../src/images/mh-calsbarg.png',
-  
+  mhPinnacleImg,
+  mhConferenceImg,
+  mhTuborgImg,
+  mhFintechImg,
+  mhItiImg,
+  mhBbcImg,
+  mhCalsbargImg,
 ];
 
 export default function Hero() {

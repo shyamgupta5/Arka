@@ -1,52 +1,62 @@
 import { motion } from 'motion/react';
 import YellowSlash from '../YellowSlash';
 
+import brandImg from '../../images/brand.png';
+import eventImg from '../../images/event.png';
+import brandActivationImg from '../../images/brand-activation.png';
+import flagshipImg from '../../images/flagship.png';
+import tradeshowImg from '../../images/tradeshow.png';
+import institutionalImg from '../../images/institutional.png';
+import experientialImg from '../../images/experiential.png';
+import miceImg from '../../images/mice.png';
+import digitalImg from '../../images/digital.png';
+
 export default function Capabilities() {
   const cards = [
     {
       title: "Brand Experiences & Launches",
       description: "Immersive brand-led experiences designed to create visibility, engagement and lasting recall.",
-      image: "../src/images/brand.png"
+      image: brandImg
     },
     {
       title: "Event Design & Production",
       description: "Immersive brand-led experiences designed to create visibility, engagement and lasting recall.",
-      image: "../src/images/event.png"
+      image: eventImg
     },
     {
       title: "Brand Activation & Creative Concepts",
       description: "Innovative concepts and activations crafted to spark engagement, drive participation, and bring brands to life.",
-      image: "../src/images/brand-activation.png"
+      image: brandActivationImg
     },
     {
       title: "Flagship Conferences & Summits",
       description: "Industry-defining platforms that convene leaders, ideas, and global conversations at scale.",
-      image: "../src/images/flagship.png"
+      image: flagshipImg
     },
     {
       title: "Trade Shows & Exhibitions",
       description: "Strategic showcase environments designed to maximize brand presence, interactions, networking and business outcomes.",
-      image: "../src/images/tradeshow.png"
+      image: tradeshowImg
     },
     {
       title: "Institutional & Government Engagements",
       description: "Structured, high-impact experiences tailored for public sector initiatives, govt. delegations, and global collaborations.",
-      image: "../src/images/institutional.png"
+      image: institutionalImg
     },
     {
       title: "Experiential Platforms & IP's",
       description: "Concept-driven properties built to engage audiences, develop communities, and scale into long-term ecosystems.",
-      image: "../src/images/experiential.png"
+      image: experientialImg
     },
     {
       title: "MICE",
       description: "Curated business experiences designed to engage stakeholders, strengthen relationships, and drive productive results.",
-      image: "../src/images/mice.png"
+      image: miceImg
     },
     {
       title: "Digital Experiences",
       description: "Integrated digital and hybrid experiences - Connecting global audiences globally.",
-      image: "../src/images/digital.png"
+      image: digitalImg
     }
   ];
 
