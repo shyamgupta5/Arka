@@ -8,7 +8,7 @@ import mhFintechImg from '../../images/mh-fintech.png';
 import mhItiImg from '../../images/mh-iti.png';
 import mhBbcImg from '../../images/mh-bbc.png';
 import mhCalsbargImg from '../../images/mh-calsbarg.png';
-
+import mhexhibitionImg from '../../images/mh-exhibition.png';
 const images = [
   mhPinnacleImg,
   mhConferenceImg,
@@ -17,6 +17,9 @@ const images = [
   mhItiImg,
   mhBbcImg,
   mhCalsbargImg,
+  mhexhibitionImg,
+  'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1600',
+  'https://images.unsplash.com/photo-1475721025505-c310b80db1e8?auto=format&fit=crop&q=80&w=1600',
 ];
 
 export default function Hero() {
