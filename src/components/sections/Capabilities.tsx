@@ -20,7 +20,7 @@ export default function Capabilities() {
     },
     {
       title: "Event Design & Production",
-      description: "Immersive brand-led experiences designed to create visibility, engagement and lasting recall.",
+      description: "Industry-defining platforms that convene leaders, ideas, and global conversations at scale.",
       image: eventImg
     },
     {
@@ -87,11 +87,10 @@ export default function Capabilities() {
                className="flex flex-col group gap-4 p-4 -m-4 transition-all duration-300 hover:bg-white dark:hover:bg-[#2a2b30] hover:shadow-xl hover:shadow-black/5 rounded-xl hover:-translate-y-1 cursor-pointer"
              >
                 <div className="overflow-hidden rounded-md shadow-sm relative">
-                  <div className="absolute inset-0 bg-white/20 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none mix-blend-overlay" />
                   <img 
                     src={card.image} 
                     alt={card.title} 
-                    className="w-full h-[220px] object-cover transition-transform duration-700 ease-out group-hover:scale-110" 
+                    className="w-full h-[220px] object-cover transition-transform duration-700 ease-out" 
                   />
                 </div>
                 <h3 className="text-lg font-bold leading-snug mt-2 transition-colors duration-300 group-hover:text-[#ffcc00]">{card.title}</h3>

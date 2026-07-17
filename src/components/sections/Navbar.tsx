@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Phone, Menu, X, Sun, Moon } from 'lucide-react';
+import { Mail, Menu, X, Sun, Moon } from 'lucide-react';
 import Logo from '../Logo';
 
 export default function Navbar() {
@@ -75,7 +75,7 @@ export default function Navbar() {
       </div>
       
       {/* Desktop Menu */}
-      <div className="hidden lg:flex items-center h-full gap-8 text-[18px] font-semibold text-black dark:text-white">
+      <div className="hidden lg:flex items-center h-full gap-8 text-[16px] font-semibold text-black dark:text-white">
         <a href="#home" onClick={() => setActiveHash('#home')} className={getLinkClasses('#home')}>Home</a>
         <a href="#why-arkamark" onClick={() => setActiveHash('#why-arkamark')} className={getLinkClasses('#why-arkamark')}>Why ArkaMark</a>
         <a href="#capabilities" onClick={() => setActiveHash('#capabilities')} className={getLinkClasses('#capabilities')}>Capabilities</a>
@@ -91,12 +91,12 @@ export default function Navbar() {
           {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
         </button>
         <a 
-          href="tel:9711566659" 
+          href="mailto:Support@arkamark.in" 
           style={ctaStyle}
           className={ctaClasses}
         >
-          <Phone size={18} className={isScrolled ? "text-black" : "text-[#ffcc00]"} />
-          <span className="text-[16px] md:text-[18px] tracking-wide">97115 66659</span>
+          <Mail size={18} className={isScrolled ? "text-black" : "text-[#ffcc00]"} />
+          <span className="text-[14px] md:text-[16px] tracking-wide">Support@arkamark.in</span>
         </a>
       </div>
 
@@ -110,11 +110,11 @@ export default function Navbar() {
           {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
         </button>
         <a 
-          href="tel:9711566659" 
+          href="mailto:Support@arkamark.in" 
           style={ctaStyle}
           className={ctaClasses}
         >
-          <Phone size={18} className={isScrolled ? "text-black" : "text-[#ffcc00]"} />
+          <Mail size={18} className={isScrolled ? "text-black" : "text-[#ffcc00]"} />
         </a>
         <button 
           className="text-black dark:text-white hover:text-[#ffcc00] transition-colors p-1"
@@ -134,11 +134,11 @@ export default function Navbar() {
           <a href="#contact" onClick={() => { setActiveHash('#contact'); setIsMobileMenuOpen(false); }} className={getMobileLinkClasses('#contact')}>Let's Connect</a>
           <div className="mt-4 pt-4 border-t border-gray-200 dark:border-[#333]">
             <a 
-              href="tel:9711566659" 
+              href="mailto:Support@arkamark.in" 
               className="flex items-center gap-3 text-[#ffcc00] font-bold text-lg"
             >
-              <Phone size={20} />
-              <span>97115 66659</span>
+              <Mail size={20} />
+              <span>Support@arkamark.in</span>
             </a>
           </div>
         </div>

@@ -52,18 +52,6 @@ export default function Contact() {
                     <span className="font-bold text-base md:text-lg leading-relaxed">
                       Unit No. 130, First Floor, US Complex, Mathura Road,<br className="hidden md:block" /> Jasola, New Delhi - 110076
                     </span>
-                    <div className="mt-4 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden w-full transition-colors duration-300">
-                      <iframe 
-                        src="https://www.google.com/maps?q=US+Complex,+Mathura+Road,+Jasola,+New+Delhi+-+110076&output=embed" 
-                        width="100%" 
-                        height="250" 
-                        style={{ border: 0 }} 
-                        allowFullScreen={false} 
-                        loading="lazy" 
-                        referrerPolicy="no-referrer-when-downgrade" 
-                        title="ArkaMark Location"
-                      ></iframe>
-                    </div>
                   </div>
                </div>
             </div>

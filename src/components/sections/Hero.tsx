@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import mhPinnacleImg from '../../images/mh-pinnacle.png';
 import mhConferenceImg from '../../images/mh-conference.png';
 import mhTuborgImg from '../../images/mh-tuborg.png';
-import mhFintechImg from '../../images/mh-fintech.png';
+import mhFintechImg from '../../images/mh-loreal.png';
 import mhItiImg from '../../images/mh-iti.png';
 import mhBbcImg from '../../images/mh-bbc.png';
 import mhCalsbargImg from '../../images/mh-calsbarg.png';
@@ -17,9 +17,7 @@ const images = [
   mhItiImg,
   mhBbcImg,
   mhCalsbargImg,
-  mhexhibitionImg,
-  'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1600',
-  'https://images.unsplash.com/photo-1475721025505-c310b80db1e8?auto=format&fit=crop&q=80&w=1600',
+  mhexhibitionImg
 ];
 
 export default function Hero() {
@@ -37,9 +35,9 @@ export default function Hero() {
       {images.map((src, index) => (
         <div 
           key={index} 
-          className={`absolute inset-0 transition-all ease-out ${index === current ? 'opacity-100 scale-110 duration-[8000ms]' : 'opacity-0 scale-100 duration-1000'}`}
+          className={`absolute inset-0 transition-opacity duration-[1500ms] ease-in-out ${index === current ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
         >
-          <img src={src} alt="Event Background" className="w-full h-full object-cover opacity-70" />
+          <img src={src} alt="Event Background" className="w-full h-full object-cover opacity-80" />
         </div>
       ))}
       <div className="absolute inset-0 border-b-8 border-[#333]"></div>
