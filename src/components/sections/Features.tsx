@@ -1,8 +1,15 @@
 import { Handshake, Users, Coins, Lightbulb, Clock, BrainCircuit } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion, useScroll, useTransform } from 'motion/react';
+import { useRef } from 'react';
 import YellowSlash from '../YellowSlash';
 
 export default function Features() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
+  const y = useTransform(scrollYProgress, [0, 1], [-80, 80]);
   const icons = [
     { icon: Handshake, label: "Reliable\npartner", color: "text-blue-500 dark:text-blue-200" },
     { icon: Users, label: "Passionate\nteam", color: "text-green-500 dark:text-green-300" },
@@ -13,15 +20,15 @@ export default function Features() {
   ];
 
   return (
-    <section className="bg-white dark:bg-[#1e1e24] text-gray-900 dark:text-white py-[100px] px-6 md:px-20 relative overflow-hidden border-b border-gray-200 dark:border-white/5 transition-colors duration-300">
+    <section ref={ref} className="bg-white dark:bg-[#1e1e24] text-gray-900 dark:text-white py-[100px] px-6 md:px-20 relative overflow-hidden border-b border-gray-200 dark:border-white/5 transition-colors duration-300">
       {/* Decorative slash top left */}
-      <YellowSlash className="absolute top-0 left-10 w-12 h-auto" />
+      <motion.div style={{ y }} className="absolute top-0 left-10 w-12 h-auto z-0"><YellowSlash className="w-full h-auto" /></motion.div>
 
       <motion.div 
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.6 }}
         className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 mt-6"
       >
         <div className="flex-1 space-y-12 w-full">
@@ -29,12 +36,28 @@ export default function Features() {
             If the experience doesn't leave a mark, it isn't ArkaMark...
           </h2>
           
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-6">
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: { staggerChildren: 0.1 }
+              }
+            }}
+            className="grid grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-6"
+          >
             {icons.map((item, i) => {
               const Icon = item.icon;
               return (
-                <div 
+                <motion.div 
                   key={i} 
+                  variants={{
+                    hidden: { opacity: 0, y: 20 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+                  }}
                   className="group flex flex-col items-start gap-4 p-5 -m-5 rounded-2xl transition-all duration-400 ease-out hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:bg-white dark:hover:bg-[#2a2b30] cursor-default border border-transparent hover:border-gray-100 dark:hover:border-[#333]"
                 >
                   <div className={`p-0 ${item.color} transition-transform duration-400 ease-out group-hover:scale-110 origin-left group-hover:drop-shadow-sm`}>
@@ -43,10 +66,10 @@ export default function Features() {
                   <p className="whitespace-pre-line text-sm md:text-base font-medium text-gray-700 dark:text-gray-200 transition-colors duration-400">
                     {item.label}
                   </p>
-                </div>
+                </motion.div>
               );
             })}
-          </div>
+          </motion.div>
         </div>
 
         <div className="flex-1 flex justify-center items-center py-10 lg:pl-16 xl:pl-20 w-full overflow-hidden sm:overflow-visible">

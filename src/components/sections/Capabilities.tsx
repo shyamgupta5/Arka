@@ -1,4 +1,5 @@
-import { motion } from 'motion/react';
+import { motion, useScroll, useTransform } from 'motion/react';
+import { useRef } from 'react';
 import YellowSlash from '../YellowSlash';
 
 import brandImg from '../../images/brand.png';
@@ -12,6 +13,12 @@ import miceImg from '../../images/mice.png';
 import digitalImg from '../../images/digital.png';
 
 export default function Capabilities() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
+  const y = useTransform(scrollYProgress, [0, 1], [-100, 100]);
   const cards = [
     {
       title: "Brand Experiences & Launches",
@@ -61,29 +68,41 @@ export default function Capabilities() {
   ];
 
   return (
-    <section id="capabilities" className="bg-gray-50 dark:bg-[#1e1e24] text-gray-900 dark:text-white py-[100px] px-6 md:px-20 relative overflow-hidden transition-colors duration-300">
+    <section ref={ref} id="capabilities" className="bg-gray-50 dark:bg-[#1e1e24] text-gray-900 dark:text-white py-[100px] px-6 md:px-20 relative overflow-hidden transition-colors duration-300">
       {/* Decorative slash top right */}
-      <YellowSlash className="absolute top-0 right-10 w-12 h-auto hidden md:block" />
+      <motion.div style={{ y }} className="absolute top-0 right-10 w-12 h-auto hidden md:block z-0"><YellowSlash className="w-full h-auto" /></motion.div>
       
       <motion.div 
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial="hidden"
+        whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8 }}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: { staggerChildren: 0.1 }
+          }
+        }}
         className="max-w-7xl mx-auto"
       >
-        <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-12 md:mb-16 text-center md:text-left">
+        <motion.h2 
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+          }}
+          className="text-3xl md:text-5xl font-bold leading-tight mb-12 md:mb-16 text-center md:text-left"
+        >
           What We Design<br className="hidden md:block" /> & Deliver
-        </h2>
+        </motion.h2>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
            {cards.map((card, i) => (
              <motion.div 
                key={i} 
-               initial={{ opacity: 0, y: 30 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               viewport={{ once: true, margin: "-50px" }}
-               transition={{ duration: 0.5, delay: i * 0.1 }}
+               variants={{
+                 hidden: { opacity: 0, y: 20 },
+                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+               }}
                className="flex flex-col group gap-4 p-4 -m-4 transition-all duration-300 hover:bg-white dark:hover:bg-[#2a2b30] hover:shadow-xl hover:shadow-black/5 rounded-xl hover:-translate-y-1 cursor-pointer"
              >
                 <div className="overflow-hidden rounded-md shadow-sm relative">

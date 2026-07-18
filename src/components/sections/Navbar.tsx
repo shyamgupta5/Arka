@@ -91,12 +91,12 @@ export default function Navbar() {
           {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
         </button>
         <a 
-          href="mailto:Support@arkamark.in" 
+          href="mailto:Hello@arkamark.in" 
           style={ctaStyle}
           className={ctaClasses}
         >
           <Mail size={18} className={isScrolled ? "text-black" : "text-[#ffcc00]"} />
-          <span className="text-[14px] md:text-[16px] tracking-wide">Support@arkamark.in</span>
+          <span className="text-[14px] md:text-[16px] tracking-wide">Hello@arkamark.in</span>
         </a>
       </div>
 
@@ -110,7 +110,7 @@ export default function Navbar() {
           {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
         </button>
         <a 
-          href="mailto:Support@arkamark.in" 
+          href="mailto:Hello@arkamark.in" 
           style={ctaStyle}
           className={ctaClasses}
         >
@@ -134,11 +134,11 @@ export default function Navbar() {
           <a href="#contact" onClick={() => { setActiveHash('#contact'); setIsMobileMenuOpen(false); }} className={getMobileLinkClasses('#contact')}>Let's Connect</a>
           <div className="mt-4 pt-4 border-t border-gray-200 dark:border-[#333]">
             <a 
-              href="mailto:Support@arkamark.in" 
+              href="mailto:Hello@arkamark.in" 
               className="flex items-center gap-3 text-[#ffcc00] font-bold text-lg"
             >
               <Mail size={20} />
-              <span>Support@arkamark.in</span>
+              <span>Hello@arkamark.in</span>
             </a>
           </div>
         </div>

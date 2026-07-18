@@ -1,26 +1,35 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { motion, useScroll, useTransform } from 'motion/react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 import mhPinnacleImg from '../../images/mh-pinnacle.png';
 import mhConferenceImg from '../../images/mh-conference.png';
 import mhTuborgImg from '../../images/mh-tuborg.png';
 import mhFintechImg from '../../images/mh-loreal.png';
+import mhexhibitionImg from '../../images/mh-exhibition.png';
 import mhItiImg from '../../images/mh-iti.png';
 import mhBbcImg from '../../images/mh-bbc.png';
 import mhCalsbargImg from '../../images/mh-calsbarg.png';
-import mhexhibitionImg from '../../images/mh-exhibition.png';
+
 const images = [
   mhPinnacleImg,
   mhConferenceImg,
   mhTuborgImg,
   mhFintechImg,
+  mhexhibitionImg,
   mhItiImg,
   mhBbcImg,
   mhCalsbargImg,
-  mhexhibitionImg
+
 ];
 
 export default function Hero() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"]
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -31,14 +40,15 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="relative w-full h-[600px] md:h-[800px] lg:h-[88vh] min-h-[600px] bg-black overflow-hidden flex flex-col justify-end">
+    <section ref={ref} id="home" className="relative w-full h-[600px] md:h-[800px] lg:h-[88vh] min-h-[600px] bg-black overflow-hidden flex flex-col justify-end">
       {images.map((src, index) => (
-        <div 
-          key={index} 
-          className={`absolute inset-0 transition-opacity duration-[1500ms] ease-in-out ${index === current ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
-        >
-          <img src={src} alt="Event Background" className="w-full h-full object-cover opacity-80" />
-        </div>
+        <motion.div key={index} style={{ y }} className={`absolute inset-0 transition-opacity duration-[1500ms] ease-in-out ${index === current ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}>
+          <img 
+            src={src} 
+            alt="Event Background" 
+            className={`w-full h-full object-cover opacity-80 transition-transform ease-out ${index === current ? 'scale-105 duration-[10000ms]' : 'scale-100 duration-1000'}`} 
+          />
+        </motion.div>
       ))}
       <div className="absolute inset-0 border-b-8 border-[#333]"></div>
       
