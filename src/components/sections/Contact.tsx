@@ -53,9 +53,9 @@ export default function Contact() {
                   <Smartphone size={26} className="flex-shrink-0 text-black dark:text-gray-300" />
                   <span className="font-bold text-base md:text-lg select-all">+91 9711566659</span>
                </div>
-               <a href="mailto:Hello@arkamark.in" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
+               <a href="mailto:hello@arkamark.in" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
                   <Mail size={26} className="flex-shrink-0 text-black dark:text-gray-300" />
-                  <span className="font-bold text-base md:text-lg select-all break-all sm:break-normal">Hello@arkamark.in</span>
+                  <span className="font-bold text-base md:text-lg select-all break-all sm:break-normal">hello@arkamark.in</span>
                </a>
                <div className="flex items-start gap-4 md:col-span-2">
                   <MapPin size={26} className="flex-shrink-0 mt-1 text-black dark:text-gray-300" />

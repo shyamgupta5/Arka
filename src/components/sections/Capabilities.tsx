@@ -27,7 +27,7 @@ export default function Capabilities() {
     },
     {
       title: "Event Design & Production",
-      description: "Industry-defining platforms that convene leaders, ideas, and global conversations at scale.",
+      description: "End-to-End design and execution, bringing concepts to life through seamless production and precision delivery.",
       image: eventImg
     },
     {
